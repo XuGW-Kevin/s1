@@ -20,7 +20,7 @@ torchrun --nproc-per-node=${gpu_count} --master_port=12345 \
     --per_device_eval_batch_size=${micro_batch_size} \
     --gradient_accumulation_steps=${gradient_accumulation_steps} \
     --num_train_epochs=${epochs} \
-    --train_file_path="/workspace/s1K-1.1_tokenized" \
+    --train_file_path="/workspace/spearman_tokenized" \
     --model_name=${base_model} \
     --deepspeed="/workspace/s1/train/ds_config.json" \
     --bf16=True \
