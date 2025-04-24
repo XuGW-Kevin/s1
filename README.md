@@ -213,6 +213,9 @@ Quick start:
 git clone https://github.com/simplescaling/s1.git
 cd s1
 pip3 install -r requirements.txt
+huggingface-cli login
+huggingface-cli download meta-llama/Llama-3.1-8B-Instruct   --repo-type model   --local-dir /workspace/Llama-3.1-8B-Instruct   --resume-download
+huggingface-cli download Xkev/s1K-1.1-llama   --repo-type dataset  --local-dir /workspace/s1K-1.1_tokenized   --resume-download
 bash train/sft.sh
 ```
 *Note: If you encounter an out-of-memory (OOM) issue with 8 GPUs, consider enabling gradient checkpointing by adding the following line to your script: `--gradient_checkpointing=True`.*
